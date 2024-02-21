@@ -4,7 +4,8 @@
   "info": {
     "singularName": "blog-post",
     "pluralName": "blog-posts",
-    "displayName": "Blog post"
+    "displayName": "Blog post",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -22,6 +23,22 @@
     },
     "content": {
       "type": "blocks"
+    },
+    "pic": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "test1"
+      ]
     }
   }
 }
