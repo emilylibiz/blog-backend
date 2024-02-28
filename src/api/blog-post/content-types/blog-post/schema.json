@@ -39,7 +39,10 @@
       "type": "enumeration",
       "enum": [
         "Entrepreneurship",
-        "Investment"
+        "Investment",
+        "Knowledge",
+        "Life",
+        "Career"
       ]
     }
   }
