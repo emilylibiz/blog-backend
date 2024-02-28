@@ -379,7 +379,7 @@ export interface ApiBlogPostBlogPost extends Schema.CollectionType {
     description: Attribute.Text;
     content: Attribute.Blocks;
     pic: Attribute.Media;
-    category: Attribute.Enumeration<['test1']>;
+    category: Attribute.Enumeration<['Entrepreneurship', 'Investment']>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
