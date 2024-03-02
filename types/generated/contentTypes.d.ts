@@ -379,8 +379,10 @@ export interface ApiBlogPostBlogPost extends Schema.CollectionType {
     description: Attribute.Text;
     content: Attribute.Blocks;
     pic: Attribute.Media;
-    category: Attribute.Enumeration<
-      ['Entrepreneurship', 'Investment', 'Knowledge', 'Life', 'Career']
+    tags: Attribute.Relation<
+      'api::blog-post.blog-post',
+      'manyToMany',
+      'api::tag.tag'
     >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
@@ -396,6 +398,34 @@ export interface ApiBlogPostBlogPost extends Schema.CollectionType {
       'oneToOne',
       'admin::user'
     > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiTagTag extends Schema.CollectionType {
+  collectionName: 'tags';
+  info: {
+    singularName: 'tag';
+    pluralName: 'tags';
+    displayName: 'tag';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    tagName: Attribute.String;
+    image: Attribute.Media;
+    blog_posts: Attribute.Relation<
+      'api::tag.tag',
+      'manyToMany',
+      'api::blog-post.blog-post'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::tag.tag', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::tag.tag', 'oneToOne', 'admin::user'> &
       Attribute.Private;
   };
 }
@@ -830,6 +860,7 @@ declare module '@strapi/types' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'api::blog-post.blog-post': ApiBlogPostBlogPost;
+      'api::tag.tag': ApiTagTag;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::content-releases.release': PluginContentReleasesRelease;

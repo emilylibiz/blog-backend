@@ -35,15 +35,11 @@
         "audios"
       ]
     },
-    "category": {
-      "type": "enumeration",
-      "enum": [
-        "Entrepreneurship",
-        "Investment",
-        "Knowledge",
-        "Life",
-        "Career"
-      ]
+    "tags": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::tag.tag",
+      "inversedBy": "blog_posts"
     }
   }
 }
