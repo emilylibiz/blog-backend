@@ -408,13 +408,13 @@ export interface ApiTagTag extends Schema.CollectionType {
     singularName: 'tag';
     pluralName: 'tags';
     displayName: 'tag';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     tagName: Attribute.String;
-    image: Attribute.Media;
     blog_posts: Attribute.Relation<
       'api::tag.tag',
       'manyToMany',
