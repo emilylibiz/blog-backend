@@ -29,7 +29,7 @@
             xsl: true,
             autoGenerate: false,
             caching: true,
-            allowedFields: ['id', 'uid', 'urlslug', 'tagName'],
+            allowedFields: ['id', 'uid', 'urlSlug', 'tagName'],
             excludedTypes: [],
           },
         },
