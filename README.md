@@ -2,14 +2,33 @@
 
 Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/dev-docs/cli) (CLI) which lets you scaffold and manage your project in seconds.
 
-### `develop`
+### How to make a database backup
 
 Start your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-develop)
 
 ```
-npm run develop
-# or
-yarn develop
+heroku login -i
+```
+
+go to https://dashboard.heroku.com/account/applications to grab authentication token for password
+
+trigger a Backup:
+
+```
+heroku pg:backups:capture --app emily-blog-backend
+```
+
+Download the Backup: This will save the backup as a .dump file in your current directory.
+
+```
+heroku pg:backups:download --app emily-blog-backend
+```
+
+Restore the Backup Locally to verify
+
+```
+pg_restore --verbose --clean --no-acl --no-owner -h localhost -U <your-db-user> -d <your-local-db-name> latest.dump
+
 ```
 
 ### `start`
