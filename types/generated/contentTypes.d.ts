@@ -377,7 +377,7 @@ export interface ApiBlogPostBlogPost extends Schema.CollectionType {
     title: Attribute.String;
     urlSlug: Attribute.String;
     description: Attribute.Text;
-    content: Attribute.Blocks;
+    content: Attribute.RichText;
     pic: Attribute.Media;
     tags: Attribute.Relation<
       'api::blog-post.blog-post',

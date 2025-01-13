@@ -22,18 +22,13 @@
       "type": "text"
     },
     "content": {
-      "type": "blocks"
+      "type": "richtext"
     },
     "pic": {
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
+      "allowedTypes": ["images", "files", "videos", "audios"]
     },
     "tags": {
       "type": "relation",
