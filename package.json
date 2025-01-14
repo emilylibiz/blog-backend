@@ -11,7 +11,7 @@
     "sitemap": "strapi-sitemap"
   },
   "dependencies": {
-    "@strapi/icons": "^2.0.0-rc.11",
+    "@strapi/icons": "1.19.0",
     "@strapi/plugin-cloud": "4.19.0",
     "@strapi/plugin-graphql": "4.19.0",
     "@strapi/plugin-i18n": "4.19.0",
