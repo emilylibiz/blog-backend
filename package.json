@@ -11,6 +11,7 @@
     "sitemap": "strapi-sitemap"
   },
   "dependencies": {
+    "@strapi/icons": "^2.0.0-rc.11",
     "@strapi/plugin-cloud": "4.19.0",
     "@strapi/plugin-graphql": "4.19.0",
     "@strapi/plugin-i18n": "4.19.0",
@@ -20,10 +21,11 @@
     "better-sqlite3": "8.6.0",
     "pg": "^8.11.3",
     "pg-connection-string": "^2.6.2",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-router-dom": "5.3.4",
     "strapi-plugin-sitemap": "^3.2.0",
+    "strapi-plugin-wysiwyg-react-md-editor": "^4.5.3",
     "styled-components": "5.3.3"
   },
   "author": {
